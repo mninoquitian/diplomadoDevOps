@@ -316,40 +316,29 @@ Abra Git Bash.
 
 [](#further-reading)Segundo paso
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Pega el siguiente texto, que sustituye tu dirección de correo electrónico en GitHub.
+
 $ ssh-keygen -t ed25519 -C "your_email@example.com"
+
 Nota: Si usas un sistema heredado que no admite el algoritmo Ed25519, usa:
 
 $ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
 Esto crea una llave SSH utilizando el correo electrónico proporcionado como etiqueta.
 
 > Generating public/private ALGORITHM key pair.
+
 Cuando se te pida: "Introduce un archivo en el que se pueda guardar la clave", teclea Enter para aceptar la ubicación de archivo predeterminada. Ten en cuenta que si ya creaste claves SSH anteriormente, ssh-keygen puede pedirte que vuelvas a escribir otra clave. En este caso, se recomienda crear una clave SSH con nombre personalizado. Para ello, escribe la ubicación de archivo predeterminada y reemplaza id_ssh_keyname por el nombre de clave personalizado.
+
+> Enter a file in which to save the key (/c/Users/YOU/.ssh/id_ALGORITHM):[Press enter]
 
 [](#further-reading)Tercer paso
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-> Enter a file in which to save the key (/c/Users/YOU/.ssh/id_ALGORITHM):[Press enter]
+Cuando se le pida, escriba una frase de contraseña segura. Para obtener más información, consulta "Trabajar con contraseñas de clave SSH".
+
 > Enter passphrase (empty for no passphrase): [Type a passphrase]
+
 > Enter same passphrase again: [Type passphrase again]
-
-
-
-[^1]: Abra Git Bash.
-
-[^2]: Pega el siguiente texto, que sustituye tu dirección de correo electrónico en GitHub.
-  This allows you to have a footnote with multiple lines.
-  $ ssh-keygen -t ed25519 -C "your_email@example.com"
-  Nota: Si usas un sistema heredado que no admite el algoritmo Ed25519, usa:
-  
-  $ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
-  Esto crea una llave SSH utilizando el correo electrónico proporcionado como etiqueta.
-  > Generating public/private ALGORITHM key pair.
-  Cuando se te pida: "Introduce un archivo en el que se pueda guardar la clave", teclea Enter para aceptar la ubicación de archivo predeterminada. Ten en cuenta que si ya creaste claves SSH anteriormente, ssh-keygen puede pedirte que vuelvas a escribir otra clave. En este caso, se recomienda crear una clave SSH con nombre personalizado. Para ello, escribe la ubicación de archivo predeterminada y reemplaza id_ssh_keyname por el nombre de clave personalizado.
-
-[^3]: Cuando se le pida, escriba una frase de contraseña segura. Para obtener más información, consulta "Trabajar con contraseñas de clave SSH".
-  This allows you to have a footnote with multiple lines.
-  > Enter a file in which to save the key (/c/Users/YOU/.ssh/id_ALGORITHM):[Press enter]
-  > Enter passphrase (empty for no passphrase): [Type a passphrase]
-  > Enter same passphrase again: [Type passphrase again]
   
 **Creación de Token**.
 
