@@ -306,6 +306,51 @@ Administración de una cola de fusión mediante combinación
 - Podría ser útil dejar esta casilla sin seleccionar si se producen errores intermitentes en las pruebas, pero no quieres que los falsos negativos interrumpan la cola.
 - **Tiempo de espera de comprobación de estado**: elige durante cuánto tiempo debe la cola esperar una respuesta de CI antes de suponer que se ha producido un error en las comprobaciones.
 
+Generar una nueva clave SSH
+======================
+Puedes generar una nueva clave SSH en el equipo local. Después de generar la clave, puedes agregar la clave a tu cuenta en GitHub.com para habilitar la autenticación para las operaciones de Git a través de SSH.
+
+[](#further-reading)Primer paso
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Abra Git Bash.
+
+[](#further-reading)Segundo paso
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+$ ssh-keygen -t ed25519 -C "your_email@example.com"
+Nota: Si usas un sistema heredado que no admite el algoritmo Ed25519, usa:
+
+$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+Esto crea una llave SSH utilizando el correo electrónico proporcionado como etiqueta.
+
+> Generating public/private ALGORITHM key pair.
+Cuando se te pida: "Introduce un archivo en el que se pueda guardar la clave", teclea Enter para aceptar la ubicación de archivo predeterminada. Ten en cuenta que si ya creaste claves SSH anteriormente, ssh-keygen puede pedirte que vuelvas a escribir otra clave. En este caso, se recomienda crear una clave SSH con nombre personalizado. Para ello, escribe la ubicación de archivo predeterminada y reemplaza id_ssh_keyname por el nombre de clave personalizado.
+
+[](#further-reading)Tercer paso
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+> Enter a file in which to save the key (/c/Users/YOU/.ssh/id_ALGORITHM):[Press enter]
+> Enter passphrase (empty for no passphrase): [Type a passphrase]
+> Enter same passphrase again: [Type passphrase again]
+
+
+
+[^1]: Abra Git Bash.
+
+[^2]: Pega el siguiente texto, que sustituye tu dirección de correo electrónico en GitHub.
+  This allows you to have a footnote with multiple lines.
+  $ ssh-keygen -t ed25519 -C "your_email@example.com"
+  Nota: Si usas un sistema heredado que no admite el algoritmo Ed25519, usa:
+  
+  $ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+  Esto crea una llave SSH utilizando el correo electrónico proporcionado como etiqueta.
+  > Generating public/private ALGORITHM key pair.
+  Cuando se te pida: "Introduce un archivo en el que se pueda guardar la clave", teclea Enter para aceptar la ubicación de archivo predeterminada. Ten en cuenta que si ya creaste claves SSH anteriormente, ssh-keygen puede pedirte que vuelvas a escribir otra clave. En este caso, se recomienda crear una clave SSH con nombre personalizado. Para ello, escribe la ubicación de archivo predeterminada y reemplaza id_ssh_keyname por el nombre de clave personalizado.
+
+[^3]: Cuando se le pida, escriba una frase de contraseña segura. Para obtener más información, consulta "Trabajar con contraseñas de clave SSH".
+  This allows you to have a footnote with multiple lines.
+  > Enter a file in which to save the key (/c/Users/YOU/.ssh/id_ALGORITHM):[Press enter]
+  > Enter passphrase (empty for no passphrase): [Type a passphrase]
+  > Enter same passphrase again: [Type passphrase again]
+  
 **Creación de Token**.
 
 GitHub admite actualmente dos tipos de personal access token: fine-grained personal access token y personal access tokens (classic). GitHub recomienda usar un fine-grained personal access token siempre que sea posible, en lugar de personal access tokens (classic). El Fine-grained personal access token tiene varias ventajas de seguridad con respecto a los personal access tokens (classic):
