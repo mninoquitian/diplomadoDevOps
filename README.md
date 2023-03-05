@@ -306,3 +306,42 @@ Administración de una cola de fusión mediante combinación
 - Podría ser útil dejar esta casilla sin seleccionar si se producen errores intermitentes en las pruebas, pero no quieres que los falsos negativos interrumpan la cola.
 - **Tiempo de espera de comprobación de estado**: elige durante cuánto tiempo debe la cola esperar una respuesta de CI antes de suponer que se ha producido un error en las comprobaciones.
 
+**Creación de Token**.
+
+GitHub admite actualmente dos tipos de personal access token: fine-grained personal access token y personal access tokens (classic). GitHub recomienda usar un fine-grained personal access token siempre que sea posible, en lugar de personal access tokens (classic). El Fine-grained personal access token tiene varias ventajas de seguridad con respecto a los personal access tokens (classic):
+
+- Cada token solo puede acceder a los recursos que pertenecen a un único usuario u organización.
+- Cada token solo puede acceder a repositorios específicos.
+- A cada token se le conceden permisos específicos, que ofrecen más control que los ámbitos concedidos a los personal access tokens (classic).
+- Cada token debe tener una fecha de expiración.
+- Los propietarios de la organización pueden requerir la aprobación de cualquier fine-grained personal access token que pueda acceder a los recursos de la organización.
+
+
+1. [Verifica tu dirección de correo electrónico](https://docs.github.com/es/get-started/signing-up-for-github/verifying-your-email-address), si todavía no lo has hecho. 1. En la esquina superior derecha de cualquier página, haga clic en la foto del perfil y, luego, en **Settings** (Configuración).
+
+![Icono Settings (Parámetros) en la barra de usuario](/img/token/userbar-account-settings.webp)
+
+1. En la barra lateral izquierda, haga clic en  **Developer settings** (Configuración de desarrollador).
+1. En la barra lateral izquierda, en  **Personal access token** , haz clic en **Tokens (clásicos)** . 1. Selecciona **Generar nuevo token** y, luego, haz clic en **Generar nuevo token (clásico)** .
+1. Asígnale a tu token un nombre descriptivo.![Campo para la descripción del token](/img/token/token_description.webp)
+1. Para asignar una expiración al token, seleccione el menú desplegable **Expiración** y, después, haga clic en un valor predeterminado, o bien use el selector de calendario.![Campo para la expiración del token](/img/token/token_expiration.webp)
+1. Selecciona los ámbitos que quieres concederle a este token. A fin de usar el token para acceder a repositorios desde la línea de comandos, seleccione **repo**. Un token sin alcances asignados solo puede acceder a información pública. Para más información, vea "[Ámbitos disponibles](https://docs.github.com/es/developers/apps/building-oauth-apps/scopes-for-oauth-apps#available-scopes)".![Selección de ámbitos de token](/img/token/token_scopes.gif)
+1. Haga clic en **Generar token**.![Botón Generar token](/img/token/generate_token.webp)![Token recién creado](/img/token/personal_access_tokens.webp)
+1. Para usar tu token para acceder a los recursos que pertenecen a una organización que usa el inicio de sesión único de SAML, autoriza el token. Para obtener más información, consulta "[Autorización de un personal access token para usarlo con el inicio de sesión único de SAML](https://docs.github.com/es/enterprise-cloud@latest/authentication/authenticating-with-saml-single-sign-on/authorizing-a-personal-access-token-for-use-with-saml-single-sign-on)" en la documentación de GitHub Enterprise Cloud.
+
+
+**Usar un token en la línea de comando.**
+
+Una vez que tengas un token, puedes ingresarlo en lugar de tu contraseña cuando realices operaciones de Git a través de HTTPS.
+
+Por ejemplo, en la línea de comando ingresarás lo siguiente:
+
+$ git clone <https://github.com/USERNAME/REPO.git>
+Username: YOUR\\_USERNAME
+Password: YOUR\\_TOKEN
+
+El Personal access token solo se puede usar para las operaciones HTTPS de Git. Si en el repositorio se usa una dirección URL remota SSH, tendrá que cambiarlo de SSH a HTTPS.
+
+Si no se te solicita tu nombre de usuario y contraseña, tus credenciales pueden estar almacenadas en la caché de tu computadora. Puede actualizar las credenciales en la cadena de claves para reemplazar la contraseña antigua por el token.
+
+En lugar de escribir manualmente el personal access token para cada operación HTTPS de Git, puedes almacenar en caché el personal access token con un cliente de Git. Git almacenará tus credenciales temporalmente en la memoria hasta que haya pasado un intervalo de vencimiento. También puedes almacenar el token en un archivo de texto simple que pueda leer Git antes de cada solicitud. Para más información, vea "Almacenamiento en caché de las credenciales de GitHub en Git".
