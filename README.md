@@ -20,8 +20,8 @@ Como su nombre indica, la web utiliza el sistema de control de versiones Git dis
 
 - Se pueden ver gráficos sobre el trabajo de los desarrolladores y las ramificaciones de cada proyecto, así como las actualizaciones que ha tenido un software desde la subida a la plataforma.
 
-
-#Visualización de ramas en su repositorio
+# Ramas
+## Visualización de ramas en su repositorio
 
 1. En GitHub.com, navega a la página principal del repositorio. 1. Encima de la lista de archivos, haga clic en  **Ramas**.
     
