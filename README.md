@@ -23,27 +23,35 @@ Como su nombre indica, la web utiliza el sistema de control de versiones Git dis
 # Comandos Básicos
 
 1. GIT INIT
+El comando git init crea un nuevo repositorio de git, estoy puede utilizarce para convertir u  proyecto existente y sin tener ninguna version en un repositorio git o para poder inicializar un nuevo repositorio vacio, esto se realia de la siguiente forma:
+
 ![](img/comandos/init.PNG)
 
 2. GIT CLONE
-
 Es un comando que se utiliza para clonar o descargar un codigo que existe en el  repositorio, esto realiza una copia de la ultima version que existe del proyecto y lo deja guardado en el computador.
 Esto se realiza de la siguiente forma:
-
 ![](img/comandos/1.PNG)
 En la anterior imagen se ve que se esta usandoando "git clone" lo que estaria clonando el repositorio diplomadoDevOps
 
 3. GIT BRANCH
+Este comando permite crear, enumerar y eliminar ramas, tambien cambiar su nombre. No permite cambiar ramas o volver a unir un historial, esto se realiza de la siguiente forma:
+
 ![](img/comandos/branch.PNG)
 
 
 4. GIT CHECKOUT
+Te permite desplazarte entre las ramas existentes en el repositorio, esto se realiza de la siguiente manera:
+
 ![](img/comandos/checkout.PNG)
 
 
 5. GIT STATUS
+Muestra el estaado del directorio de trabajo y del área del entorno de ensayo. Permite ver los cambios que se han preparado, los que no y los archivos en los que Git no va a realizar el seguimiento.
+Esto se usa de la siguiente forma:
+Cuando nos marca rojo un archivo significa que no esta seleccionado para realizar el commit y push al repositorio
 ![](img/comandos/status.PNG)
-![](img/comandos/status1.PNG)
+Cuando se muestra verde, significa que el archivo ya fue seleccionado para relizar commit y pull
+![](img/comandos/status2.PNG)
 
 
 6. GIT ADD
