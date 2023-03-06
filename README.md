@@ -23,32 +23,49 @@ Como su nombre indica, la web utiliza el sistema de control de versiones Git dis
 # Comandos Básicos
 
 1. GIT INIT
+![](img/comandos/init.PNG)
 
 2. GIT CLONE
 
 Es un comando que se utiliza para clonar o descargar un codigo que existe en el  repositorio, esto realiza una copia de la ultima version que existe del proyecto y lo deja guardado en el computador.
 Esto se realiza de la siguiente forma:
 
-![This is an image](img/comandos/1.PNG)
+![](img/comandos/1.PNG)
 En la anterior imagen se ve que se esta usandoando "git clone" lo que estaria clonando el repositorio diplomadoDevOps
 
 3. GIT BRANCH
+![](img/comandos/branch.PNG)
+
 
 4. GIT CHECKOUT
+![](img/comandos/checkout.PNG)
+
 
 5. GIT STATUS
+![](img/comandos/status.PNG)
+![](img/comandos/status1.PNG)
+
 
 6. GIT ADD
+![](img/comandos/add.PNG)
 
 7. GIT COMMIT
+![](img/comandos/commit.PNG)
+
 
 8. GIT PUSH
+![](img/comandos/push.PNG)
+
 
 9. GIT PULL
+![](img/comandos/pull.PNG)
+
 
 10. GIT REVERT
+![](img/comandos/revert.PNG)
 
 11. GIT MERGE
+![](img/comandos/merge.PNG)
 
 
 # Ramas
