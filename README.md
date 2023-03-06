@@ -29,7 +29,7 @@ Como su nombre indica, la web utiliza el sistema de control de versiones Git dis
 Es un comando que se utiliza para clonar o descargar un codigo que existe en el  repositorio, esto realiza una copia de la ultima version que existe del proyecto y lo deja guardado en el computador.
 Esto se realiza de la siguiente forma:
 
-![This is an image](imagenes/1.PNG)
+![This is an image](img/comandos/1.PNG)
 En la anterior imagen se ve que se esta usandoando "git clone" lo que estaria clonando el repositorio diplomadoDevOps
 
 3. GIT BRANCH
