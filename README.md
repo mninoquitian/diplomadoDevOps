@@ -20,6 +20,37 @@ Como su nombre indica, la web utiliza el sistema de control de versiones Git dis
 
 - Se pueden ver gráficos sobre el trabajo de los desarrolladores y las ramificaciones de cada proyecto, así como las actualizaciones que ha tenido un software desde la subida a la plataforma.
 
+# Comandos Básicos
+
+1. GIT INIT
+
+2. GIT CLONE
+
+Es un comando que se utiliza para clonar o descargar un codigo que existe en el  repositorio, esto realiza una copia de la ultima version que existe del proyecto y lo deja guardado en el computador.
+Esto se realiza de la siguiente forma:
+
+![This is an image](imagenes/1.PNG)
+En la anterior imagen se ve que se esta usandoando "git clone" lo que estaria clonando el repositorio diplomadoDevOps
+
+3. GIT BRANCH
+
+4. GIT CHECKOUT
+
+5. GIT STATUS
+
+6. GIT ADD
+
+7. GIT COMMIT
+
+8. GIT PUSH
+
+9. GIT PULL
+
+10. GIT REVERT
+
+11. GIT MERGE
+
+
 # Ramas
 ## Visualización de ramas en su repositorio
 
